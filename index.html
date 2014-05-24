@@ -4,7 +4,7 @@
 <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
 <title></title>
 
-<link rel="stylesheet" href="themes/Freedom.min.css" />
+<link rel="stylesheet" href="themes/txfreedom.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
 <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 
@@ -115,18 +115,21 @@ function fpause() {
 <!-- Start of first page -->
 <div data-role="page" id="player" data-theme="a">
 
-	<div data-role="panel" data-display="overlay" data-theme="a" id="nav-panel0">
+	<div data-role="panel" data-display="overlay" data-theme="c" id="nav-panel0">
 		<ul data-role="listview">
-			<li style="text-align:center;">Freedom Radio</li>
-			<li data-role="list-divider"></li>
+			<li data-role="list-divider" style="text-align:center;">Menu</li>
+
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
+
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
+
 			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-	    	<li data-role="list-divider"></li>
+
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
+
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
+
 			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
-	    	<li data-role="list-divider"></li>
 	    </ul>
 	</div>	 		
      			
@@ -154,7 +157,7 @@ function fpause() {
 	    <div data-role="navbar">
 	      <ul>
 	        <li><a id="callin" href="tel:+18558541300" data-icon="phone">Call In</a></li>
-	        <li><a href="#nav-panel0" data-transition="slide" data-direction="reverse" data-icon="bars">Panel</a></li>
+	        <li><a href="#nav-panel0" data-transition="slide" data-direction="reverse" data-icon="bars">Menu</a></li>
 	      </ul>
 	    </div>
 	  </div><!-- /footer -->
@@ -163,20 +166,23 @@ function fpause() {
 
 <div data-role="page" id="showinfopage">
 
-	<div data-role="panel" data-display="overlay" data-theme="a" id="nav-panel1">
+	<div data-role="panel" data-display="overlay" data-theme="c" id="nav-panel1">
 		<ul data-role="listview">
-			<li style="text-align:center;">Freedom Radio</li>
-			<li data-role="list-divider"></li>
+			<li data-role="list-divider" style="text-align:center;">Menu</li>
+
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
+
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
+
 			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-	    	<li data-role="list-divider"></li>
+
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
+
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
+
 			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
-	    	<li data-role="list-divider"></li>
 	    </ul>
-	</div>
+	</div>	 		
 	
 	<div data-role="header">
 		<h1>Show Information</h1>
@@ -194,7 +200,7 @@ function fpause() {
 	    <div data-role="navbar">
 	      <ul>
   	        <li><a href="#player" data-transition="slide" data-direction="reverse" data-icon="audio">Listen Online</a></li>
-  	        <li><a href="#nav-panel1" data-transition="slide" data-direction="reverse" data-icon="bars">Panel</a></li>
+  	        <li><a href="#nav-panel1" data-transition="slide" data-direction="reverse" data-icon="bars">Menu</a></li>
   	      </ul>
 	    </div>
 	  </div><!-- /footer -->
@@ -204,30 +210,34 @@ function fpause() {
 <!-- NEWS PAGE -->
 <div data-role="page" id="newspage">
 
-	<div data-role="panel" data-display="overlay" data-theme="a" id="nav-panel2">
+	<div data-role="panel" data-display="overlay" data-theme="c" id="nav-panel2">
 		<ul data-role="listview">
-			<li style="text-align:center;">Freedom Radio</li>
-			<li data-role="list-divider"></li>
+			<li data-role="list-divider" style="text-align:center;">Menu</li>
+
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
+
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
+
 			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-	    	<li data-role="list-divider"></li>
+
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
+
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
+
 			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
-	    	<li data-role="list-divider"></li>
 	    </ul>
-	</div>
+	</div>	 		
+
 	<div data-role="header">
 		<h1>News Feed</h1>
 		<a href="#nav-panel2" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<ul id="nlist" data-role="listview" data-theme="a" data-filter="true">
+		<ul id="nlist" data-role="listview" data-theme="b" data-filter="false">
 			<li id="nload">Loading Data...</li>
 		</ul>
-		<ul id="results" data-role="listview" data-theme="a">
+		<ul id="results" data-role="listview" data-theme="b">
 		</ul>
     </div>
 
@@ -235,7 +245,7 @@ function fpause() {
 	    <div data-role="navbar">
 	      <ul>
   	        <li><a href="#player" data-transition="slide" data-direction="reverse" data-icon="audio">Listen Online</a></li>
-  	      	<li><a href="#nav-panel2" data-transition="slide" data-direction="reverse" data-icon="bars">Panel</a></li>
+  	      	<li><a href="#nav-panel2" data-transition="slide" data-direction="reverse" data-icon="bars">Menu</a></li>
   	      </ul>
 	    </div>
 	  </div><!-- /footer -->
@@ -246,30 +256,34 @@ function fpause() {
 <!-- Start of Station Info page -->
 <div data-role="page" id="stationinfopage">
 
-	<div data-role="panel" data-display="overlay" data-theme="a" id="nav-panel3">
+<div data-role="panel" data-display="overlay" data-theme="c" id="nav-panel3">
 		<ul data-role="listview">
-			<li style="text-align:center;">Freedom Radio</li>
-			<li data-role="list-divider"></li>
+			<li data-role="list-divider" style="text-align:center;">Menu</li>
+
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
+
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
+
 			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-	    	<li data-role="list-divider"></li>
+
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
+
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
+
 			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
-	    	<li data-role="list-divider"></li>
 	    </ul>
-	</div>       
+	</div>	 		
+     
 
 	<div data-role="header">
 		<h1>TX Freedom Radio</h1>
 		<a href="#nav-panel3" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
 	</div><!-- /header -->
 	
-	<div role="main" class="ui-content">
-		<ul data-role="listview" data-inset="true">
-		    <li data-role="list-divider">Station Information</li>
-		    <li data-icon="action"><a href="https://maps.google.com/maps?saddr=%22current+location%22&daddr=440+N+18th+St+%233,+Beaumont,+TX+77707&hl=en&sll=30.174198,-94.167849&sspn=0.365066,0.688019&geocode=FabRzQEds6Bi-inVmdJNZTA5hjGRXfJ8JOlKvg%3BFXoOywEdvJNj-ilfCDkYT8s-hjFh5ARUc0IJKw&mra=ls&t=m&z=12">
+	<div role="main" class="ui-content" >
+		<ul data-role="listview" data-inset="true" data-theme="c">
+		    <li data-role="list-divider" data-theme="c">Station Information</li>
+		    <li data-icon="action" data-theme="c"><a href="https://maps.google.com/maps?saddr=%22current+location%22&daddr=440+N+18th+St+%233,+Beaumont,+TX+77707&hl=en&sll=30.174198,-94.167849&sspn=0.365066,0.688019&geocode=FabRzQEds6Bi-inVmdJNZTA5hjGRXfJ8JOlKvg%3BFXoOywEdvJNj-ilfCDkYT8s-hjFh5ARUc0IJKw&mra=ls&t=m&z=12">
 		    <h3>Address</h3>
 		    <p>440 18th Street Suite 3<br>Beaumont TX 77707<br></p>
 		    </a></li>
@@ -294,7 +308,7 @@ function fpause() {
 	    <div data-role="navbar">
 	      <ul>
   	        <li><a href="#player" data-transition="slide" data-direction="reverse" data-icon="audio">Listen Online</a></li>
-  	      	<li><a href="#nav-panel3" data-transition="slide" data-direction="reverse" data-icon="bars">Panel</a></li>
+  	      	<li><a href="#nav-panel3" data-transition="slide" data-direction="reverse" data-icon="bars">Menu</a></li>
 	      </ul>
 	    </div>
 	  </div><!-- /footer -->
@@ -302,22 +316,26 @@ function fpause() {
 
 
 <!-- App Info PAGE -->
-<div data-role="page" id="appinfopage">
+<div data-role="page" id="appinfopage"  data-theme="a">
 
-	<div data-role="panel" data-display="overlay" data-theme="a" id="nav-panel4">
+<div data-role="panel" data-display="overlay" data-theme="c" id="nav-panel4">
 		<ul data-role="listview">
-			<li style="text-align:center;">Freedom Radio</li>
-			<li data-role="list-divider"></li>
+			<li data-role="list-divider" style="text-align:center;">Menu</li>
+
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
+
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
+
 			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-	    	<li data-role="list-divider"></li>
+
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
+
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
+
 			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
-	    	<li data-role="list-divider"></li>
 	    </ul>
-	</div>
+	</div>	 		
+
 	<div data-role="header">
 		<h1>App Information</h1>
 		<a href="#nav-panel4" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
@@ -340,7 +358,7 @@ function fpause() {
 	    <div data-role="navbar">
 	      <ul>
   	        <li><a href="#player" data-transition="slide" data-direction="reverse" data-icon="audio">Listen Online</a></li>
-  	      	<li><a href="#nav-panel4" data-transition="slide" data-direction="reverse" data-icon="bars">Panel</a></li>
+  	      	<li><a href="#nav-panel4" data-transition="slide" data-direction="reverse" data-icon="bars">Menu</a></li>
   	      </ul>
 	    </div>
 	  </div><!-- /footer -->
@@ -350,27 +368,31 @@ function fpause() {
 <!-- Events PAGE -->
 <div data-role="page" id="eventspage">
 
-	<div data-role="panel" data-display="overlay" data-theme="a" id="nav-panel5">
+<div data-role="panel" data-display="overlay" data-theme="c" id="nav-panel5">
 		<ul data-role="listview">
-			<li style="text-align:center;">Freedom Radio</li>
-			<li data-role="list-divider"></li>
+			<li data-role="list-divider" style="text-align:center;">Menu</li>
+
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
+
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
+
 			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-	    	<li data-role="list-divider"></li>
+
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
+
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
+
 			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
-	    	<li data-role="list-divider"></li>
 	    </ul>
-	</div>
+	</div>	 		
+
 	<div data-role="header">
 		<h1>Events Feed</h1>
 		<a href="#nav-panel5" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<ul id="nlist" data-role="listview" data-theme="a" data-filter="false">
+		<ul id="nlist" data-role="listview" data-theme="b" data-filter="false">
 			<li id="nload">Loading Data...</li>
 		</ul>
 		<ul id="results" data-role="listview" data-theme="a">
@@ -381,7 +403,7 @@ function fpause() {
 	    <div data-role="navbar">
 	      <ul>
   	        <li><a href="#player" data-transition="slide" data-direction="reverse" data-icon="audio">Listen Online</a></li>
-  	      	<li><a href="#nav-panel5" data-transition="slide" data-direction="reverse" data-icon="bars">Panel</a></li>
+  	      	<li><a href="#nav-panel5" data-transition="slide" data-direction="reverse" data-icon="bars">Menu</a></li>
   	      </ul>
 	    </div>
 	  </div><!-- /footer -->
