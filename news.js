@@ -1,6 +1,7 @@
 //Insert News Feed
 var xml;
-$( "#newspage" ).on( "pagecreate", function( event ) {
+//$( "#newspage" ).on( "pagecreate", function( event ) {
+$(document).ready(function() {
     $.ajax({
         type: "GET",
         url: "http://fikesmedia.com/_freedom1300/articles.xml",
