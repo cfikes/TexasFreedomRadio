@@ -5,6 +5,8 @@ $("#newspage").on("pagecreate",function(event) {
 });
 
 function loadnews() {
+    $("#nlist").html("");
+	$('#nload').fadeIn();
 
     $.ajax({
         type: "GET",
@@ -16,6 +18,7 @@ function loadnews() {
     function xmlParser(data) {
     var xml = data;
     $('#nload').fadeOut();
+    $("#nlist").html("");
 	var counter = 0;
     $(xml).find("item").each(function () {
 
