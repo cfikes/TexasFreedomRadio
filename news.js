@@ -1,7 +1,11 @@
 //Insert News Feed
-var xml;
-//$( "#newspage" ).on( "pagecreate", function( event ) {
-$(document).ready(function() {
+
+$("#newspage").on("pagecreate",function(event) {
+	loadnews();
+});
+
+function loadnews() {
+
     $.ajax({
         type: "GET",
         url: "http://fikesmedia.com/_freedom1300/articles.xml",
@@ -10,21 +14,19 @@ $(document).ready(function() {
     });
 	
     function xmlParser(data) {
-    
-    xml = data;
-
+    var xml = data;
     $('#nload').fadeOut();
-
+	var counter = 0;
     $(xml).find("item").each(function () {
+
         var ntitle = $(this).find("title").text();
         var ndate = $(this).find("pubDate").text();
         var ndesc = $(this).find("description").text();
         var nlink = $(this).find("link").text();
-
-        $("#nlist").append('<li><h3 id="ntitle">' + ntitle + '</h3><p>' + ndesc + '</p><p>' + ndate + '<br>');
-
-        $('#nlist').listview('refresh'); 
+		
+		$("#nlist").append('<li><h3 id="ntitle">' + ntitle + '</h3><p>' + ndesc + '</p><p>' + ndate + '<br>');			
+		$('#nlist').listview('refresh'); 
     });
-}
 
-});
+	}
+}
