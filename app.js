@@ -62,3 +62,6 @@ function fpause() {
     audioPlayer.currentTime = 0;
 }
 
+function openlink(url) {
+	window.open(url, '_system');
+}
