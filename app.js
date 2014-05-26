@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 //Check Offline status and Display Offline Page
-	document.addEventListener("offline", offlinePage, false);
+	//document.addEventListener("offline", offlinePage, false);
 
     var wheight = $(window).height();
     var wwidth = $(window).width();
