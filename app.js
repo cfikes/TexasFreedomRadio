@@ -22,7 +22,6 @@ $( document ).ready(function() {
 	$("#showinfo").css({"height": iwidth,"width": iwidth,"background": "url(\"img/generic.jpg\")","background-size": iwidth});
 	$("#pbutton").attr("height", bheight);
 	$("#sbutton").attr("height", bheight);	
-	loadnews();
 });
 
 $(window).resize(function() {

@@ -1,13 +1,13 @@
 //Insert News Feed
 
-//$("#newspage").on("pagecreate",function(event) {
-//	console.log("loadnews() called on CREATE PAGE");
-//	loadnews();
-//});
+$("#newspage").on("pagecreate",function(event) {
+	console.log("loadnews() called on CREATE PAGE");
+	loadnews();
+});
 
 function loadnews() {
     var xml;
-    
+    $("#newsrefreshbutton").hide();
     $("#nlist").html('<li id="nlistloading">Loading News Feed...</li>');
 	
     $.ajax({
@@ -31,10 +31,10 @@ function loadnews() {
         var nlink = $(this).find("link").text();
 	
 		//$("#nlist").append('<li><h3 id="ntitle">' + ntitle + '</h3><p>' + ndesc + '</p><p>' + ndate + '<br>');			
-		$("#nlist").append('<li><a href="' + nlink + '" target="_system"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a></li>');
-		//$('#nlist').listview('refresh'); 
+		$("#nlist").append('<li><a href="' + nlink + '" target="_system"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
+		$('#nlist').listview('refresh'); 
 	    console.log("created news item.");
     });
-
+	$("#newsrefreshbutton").show();
 	}
 }
