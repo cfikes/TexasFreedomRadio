@@ -32,7 +32,7 @@ function loadnews() {
 	
 		//$("#nlist").append('<li><h3 id="ntitle">' + ntitle + '</h3><p>' + ndesc + '</p><p>' + ndate + '<br>');			
 		//$("#nlist").append('<li><a href="' + nlink + '" target="_system"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
-		$("#nlist").append('<li><a href="#" onclick="openlink(' + nlink + ');"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
+		$("#nlist").append('<li><a href="' + nlink + '" onClick="javascript:return openlink(this)"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
 		$('#nlist').listview('refresh'); 
 	    console.log("created news item.");
     });

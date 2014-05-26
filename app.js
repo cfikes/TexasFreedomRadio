@@ -63,5 +63,6 @@ function fpause() {
 }
 
 function openlink(url) {
-	window.open(url, '_system');
+	window.open(url.href, "_system");
+	return false;
 }
