@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+<title></title>
+
+<link rel="stylesheet" href="themes/txfreedom.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+<style type="text/css">
+#showinfo {
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background: url("img/offline.png");
+}
+#showinfo img {
+	vertical-align: middle;
+}
+#player {
+text-align: center;
+}
+.pcontrols {
+	margin: 1%;
+	text-align: center;
+}
+.pcontrols img {
+	height: 22%;
+}
+.customback {
+	background: url("linnenback.png") repeat;
+}
+#mshowtitle {
+	margin: 5px;
+}
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+<script src="app.js"></script>
+
+</head>
+
+<body>
+
+<!-- Start of first page -->
+<div data-role="page" id="player" data-theme="a">
+
+	<div data-role="panel" data-display="overlay" data-theme="c" id="nav-panel0">
+		<ul data-role="listview">
+			<li data-role="list-divider" style="text-align:center;">Menu</li>
+
+			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
+
+			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
+
+			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
+
+	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
+
+			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
+
+			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
+	    </ul>
+	</div>	 		
+     			
+	<div data-role="header">
+		<h1>TX Freedom Radio</h1>
+		<a href="#nav-panel0" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<div id="player">
+		<div id="showinfo">
+			<span class="helper"></span>
+
+		<h3 id="mshowtitle">This app requires internet connectivity. Restore connectivity to continue listening.</h3>
+		</div>
+		</div>
+	</div>
+
+
+	</div>
+	</div><!-- /content -->
+
+	</div><!-- /page -->
+</body>
+</html>
