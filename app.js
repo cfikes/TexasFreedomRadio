@@ -1,8 +1,4 @@
 $( document ).ready(function() {
-
-//Check Offline status and Display Offline Page
-	//document.addEventListener("offline", offlinePage, false);
-
     var wheight = $(window).height();
     var wwidth = $(window).width();
     var iheight;
@@ -64,9 +60,5 @@ function fpause() {
 	var audioPlayer = document.getElementById("shoutcast");
     audioPlayer.pause();
     audioPlayer.currentTime = 0;
-}
-
-function offlinePage() {
-	window.location.href = 'offline.html';
 }
 

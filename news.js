@@ -5,7 +5,9 @@ $("#newspage").on("pagecreate",function(event) {
 });
 
 function loadnews() {
-    $("#nlist").html("");
+    var xml;
+    
+    $("#nlist").html('<li id="nlistloading">Loading News Feed...</li>');
 
     $.ajax({
         type: "GET",
@@ -15,7 +17,8 @@ function loadnews() {
     });
 	
     function xmlParser(data) {
-    var xml = data;
+    xml = data;
+    $("#nlistloading").hide();
 
     $(xml).find("item").each(function () {
 
