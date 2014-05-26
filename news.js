@@ -24,12 +24,11 @@ function loadnews() {
 
         var ntitle = $(this).find("title").text();
         var ndate = $(this).find("pubDate").text();
+        ndate = ndate.substring(0, ndate.length - 15);
         //var ndesc = $(this).find("description").text();
         var nlink = $(this).find("link").text();
-        ndate = ndate.substring(0, ndate.length - 15);
-		
 		//$("#nlist").append('<li><h3 id="ntitle">' + ntitle + '</h3><p>' + ndesc + '</p><p>' + ndate + '<br>');			
-		$("#nlist").append('<li><a href="' + nlink + '" target="_system"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a></li>');
+		$("#nlist").append('<li><a href="' + nlink + '" target="_system"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
 		$('#nlist').listview('refresh'); 
     });
 
