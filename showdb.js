@@ -13,7 +13,7 @@ function updateShow(iheight){
       var sPhone = "tel:" + sPhone;
 	sArt = "url(http://www.fikesmedia.com/_freedom1300/_mobile/img/" + sArt + ")";
 	$("#showinfo").css("background", sArt);
-	$("#showinfo").css("background-size", iheight);
+	$("#showinfo").css("background-size", "cover");
 	$("#showtitle").html(sTitle);
 	$("#mshowtitle").html(sTitle);
 	$("#mshowtitle").html(sTitle);
