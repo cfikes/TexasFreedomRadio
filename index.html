@@ -61,11 +61,11 @@ text-align: center;
 			<li data-role="list-divider" style="text-align:center;">Menu</li>
 
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
-
+			<!--
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
 
 			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-
+			-->
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
 
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
@@ -223,7 +223,7 @@ text-align: center;
 	<div role="main" class="ui-content" >
 		<ul data-role="listview" data-inset="true" data-theme="c">
 		    <li data-role="list-divider" data-theme="c">Station Information</li>
-			<li><a href="www.texasfreedomradio.com" onClick="javascript:return openlink(\"www.texasfreedomradio.com\");">
+			<li><a href="www.texasfreedomradio.com" target="_system" onClick="javascript:return openlink(\"http://www.texasfreedomradio.com\");">
 		    <h3>Texas Freedom Radio</h3>
 		    <p>http://www.TexasFreedomRadio.com/</p>
 			</a></li>
@@ -282,7 +282,7 @@ text-align: center;
 
 	<div role="main" class="ui-content">
 		<p>Development by FikesMedia.</p>
-		<p>For more information please visit <a href="http://www.fikesmedia.com/" onClick="javascript:return openlink(\"www.FikesMedia.com\"); >http://www.FikesMedia.com/</a></p>
+		<p>For more information please visit <a href="http://www.fikesmedia.com/" target="_system" onClick="javascript:return openlink(\"http://www.FikesMedia.com\"); >http://www.FikesMedia.com/</a></p>
 		<ul data-role="listview" data-inset="true">
 				<li data-role="list-divider">FikesMedia News and Media Mobile Application</li>
 				<li data-icon="bullets"><a>Cross Platform</a></li>
