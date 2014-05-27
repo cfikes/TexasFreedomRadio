@@ -8,7 +8,8 @@ function updateShow(iheight){
     $(xml).find('show').each(function(){
       var sTitle = $(this).find('title').text();
       var sDesc = $(this).find('desc').text();
-      var sArt = $(this).find('artwork').text();
+      var sLongDesc = $(this).find('longdesc').text();
+	  var sArt = $(this).find('artwork').text();
       var sPhone = $(this).find('phone').text();
       var sPhone = "tel:" + sPhone;
 	sArt = "url(http://www.fikesmedia.com/_freedom1300/_mobile/img/" + sArt + ")";
@@ -18,7 +19,7 @@ function updateShow(iheight){
 	$("#mshowtitle").html(sTitle);
 	$("#mshowtitle").html(sTitle);
 	$("#callin").attr("href",sPhone);
-	$("#showdesc").html(sDesc);
+	$("#showdesc").html(sLongDesc);
 	
 		
  	//$("#now").html("<h4>On Air Now:</h4><img src=\"_mobile/img/" + sArt + "\"><h3>" + sTitle + "</h3><p>Call In Number: 888.888.8888</p>");
