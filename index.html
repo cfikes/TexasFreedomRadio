@@ -44,10 +44,12 @@ text-align: center;
     vertical-align: middle;
 }
 </style>
+<!--<link rel="stylesheet" href="css/styles.css" />-->
+
 
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
-<script src="app.js"></script>
+
 
 </head>
 
@@ -61,11 +63,9 @@ text-align: center;
 			<li data-role="list-divider" style="text-align:center;">Menu</li>
 
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
-			<!--
+			
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
 
-			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-			-->
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
 
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
@@ -83,14 +83,18 @@ text-align: center;
 	<div id="player">
 		<div id="showinfo">
 		<span class="helper"></span>
-			<img src="playbutton.png" id="pbutton" onclick="fplay();">
-			<img src="stopbutton.png" id="sbutton" onclick="fpause();">
+			<img src="img/playbutton.png" id="pbutton" onclick="fplay();">
+			<img src="img/stopbutton.png" id="sbutton" onclick="fpause();">
 		</div>
 	<h3 id="mshowtitle"></h3>
 	</div>
-		<audio id="shoutcast">
-	<!--			<source src="http://streams4.museter.com:8516/;stream.mp3" type="audio/mp3"> -->
-			<source src="http://streams4.museter.com:8516/;stream.mp3&13202692901" type="audio/mp3">
+	 <div id="ubaplayer"></div>
+        <span class="ubaplayer-controls" style="display:none;">
+            <a class="ubaplayer-button" id="hiddenplayer" href="http://streams4.museter.com:8516/;stream.mp3">Play</a></span>
+
+		<!--<audio id="shoutcast">
+			<source src="http://streams4.museter.com:8516/;stream.mp3" type="audio/mp3">
+			<source src="http://streams4.museter.com:8516/;stream.mp3&13202692901" type="audio/mp3">-->
 		</audio>
 	</div><!-- /content -->
 
@@ -112,11 +116,9 @@ text-align: center;
 			<li data-role="list-divider" style="text-align:center;">Menu</li>
 
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
-			<!--
+			
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
 
-			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-			-->
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
 
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
@@ -156,11 +158,9 @@ text-align: center;
 			<li data-role="list-divider" style="text-align:center;">Menu</li>
 
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
-			<!--
+			
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
 
-			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-			-->
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
 
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
@@ -201,12 +201,10 @@ text-align: center;
 			<li data-role="list-divider" style="text-align:center;">Menu</li>
 
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
-			<!--
+			
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
 
-			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-			-->
-	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
+			<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
 
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
 
@@ -262,11 +260,9 @@ text-align: center;
 			<li data-role="list-divider" style="text-align:center;">Menu</li>
 
 			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
-			<!--
+			
 			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
 
-			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-			-->
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
 
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
@@ -303,55 +299,18 @@ text-align: center;
 	  </div><!-- /footer -->
 </div><!-- /page -->
 
-
-<!-- Events PAGE -->
-<div data-role="page" id="eventspage">
-
-<div data-role="panel" data-display="overlay" data-theme="c" id="nav-panel5">
-		<ul data-role="listview">
-			<li data-role="list-divider" style="text-align:center;">Menu</li>
-
-			<li data-icon="audio"><a href="#player" data-transition="slide">Listen Online</a></li>
-			<!--
-			<li data-icon="grid"><a href="#newspage" data-transition="slide">News Feed</a></li>
-
-			<li data-icon="calendar"><a href="#eventspage" data-transition="slide">Events Feed</a></li>
-			-->
-	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
-
-			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
-
-			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
-	    </ul>
-	</div>	 		
-
-	<div data-role="header">
-		<h1>Events Feed</h1>
-		<a href="#nav-panel5" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<ul id="nlist" data-role="listview" data-theme="b" data-filter="false">
-			<li id="nload">Loading Data...</li>
-		</ul>
-		<ul id="results" data-role="listview" data-theme="a">
-		</ul>
-    </div>
-
-	<div data-role="footer" data-position="fixed">
-	    <div data-role="navbar">
-	      <ul>
-  	        <li><a href="#player" data-transition="slide" data-direction="reverse" data-icon="audio">Listen Online</a></li>
-  	      	<li><a href="#nav-panel5" data-transition="slide" data-direction="reverse" data-icon="bars">Menu</a></li>
-  	      </ul>
-	    </div>
-	  </div><!-- /footer -->
-</div><!-- /page -->
-
-<script src="cordova.js"></script>
-<script src="showdb.js"></script>
-<script src="news.js"></script>
-<!--<script src="events.js"></script>-->
+<script src="js/cordova.js"></script>
+<script src="js/app.js"></script>
+<script src="js/showdb.js"></script>
+<script src="js/news.js"></script>
+<script src="js/jquery.ubaplayer.js"></script>
+<script>
+	$(function(){
+		$("#ubaplayer").ubaPlayer({
+		codecs: [{name:"MP3", codec: 'audio/mpeg;'}]
+		});
+	});
+</script>
 
 </body>
 

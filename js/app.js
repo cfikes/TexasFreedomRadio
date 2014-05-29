@@ -51,15 +51,17 @@ function fplay() {
 	$("#pbutton").hide();
 	$("#sbutton").show();
 	var audioPlayer = document.getElementById("shoutcast");
-    audioPlayer.play();
+    //audioPlayer.play();
+	$("#hiddenplayer").click();
 	
 }
 function fpause() {
 	$("#sbutton").hide();
 	$("#pbutton").show();
 	var audioPlayer = document.getElementById("shoutcast");
-    audioPlayer.pause();
-    audioPlayer.currentTime = 0;
+    //audioPlayer.pause();
+    //audioPlayer.currentTime = 0;
+	$("#hiddenplayer").click();
 }
 
 function openlink(url) {
