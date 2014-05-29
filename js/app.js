@@ -1,3 +1,11 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+    cordova.exec(null, null, "SplashScreen", "hide", [])
+
+}
+
 $( document ).ready(function() {
     var wheight = $(window).height();
     var wwidth = $(window).width();
