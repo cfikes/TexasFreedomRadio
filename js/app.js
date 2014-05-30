@@ -22,7 +22,7 @@ $( document ).ready(function() {
 	$("#showinfo").css({"height": iwidth,"width": iwidth,"background": "url(\"img/generic.jpg\")","background-size": iwidth});
 	$("#pbutton").attr("height", bheight);
 	$("#sbutton").attr("height", bheight);	
-	
+		
 	//UbaPlayer
 	$(function(){
 		$("#ubaplayer").ubaPlayer({
@@ -58,18 +58,20 @@ $(window).resize(function() {
 function fplay() {
 	$("#pbutton").hide();
 	$("#sbutton").show();
-	var audioPlayer = document.getElementById("shoutcast");
+	//var audioPlayer = document.getElementById("shoutcast");
     //audioPlayer.play();
-	$("#hiddenplayer").click();
-	
+	//$("#hiddenplayer").click();
+	html5audio.play();
 }
+
 function fpause() {
 	$("#sbutton").hide();
 	$("#pbutton").show();
 	var audioPlayer = document.getElementById("shoutcast");
     //audioPlayer.pause();
     //audioPlayer.currentTime = 0;
-	$("#hiddenplayer").click();
+	//$("#hiddenplayer").click();
+	html5audio.pause();
 }
 
 function openlink(element) {
