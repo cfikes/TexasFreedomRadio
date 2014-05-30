@@ -22,6 +22,14 @@ $( document ).ready(function() {
 	$("#showinfo").css({"height": iwidth,"width": iwidth,"background": "url(\"img/generic.jpg\")","background-size": iwidth});
 	$("#pbutton").attr("height", bheight);
 	$("#sbutton").attr("height", bheight);	
+	
+	//UbaPlayer
+	$(function(){
+		$("#ubaplayer").ubaPlayer({
+		codecs: [{name:"MP3", codec: 'audio/mpeg;'}]
+		});
+	});
+	
 });
 
 $(window).resize(function() {
