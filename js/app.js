@@ -1,9 +1,3 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    navigator.splashscreen.hide();
-}
-
 $( document ).ready(function() {
     var wheight = $(window).height();
     var wwidth = $(window).width();
