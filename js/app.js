@@ -70,7 +70,7 @@ function fpause() {
 	$("#hiddenplayer").click();
 }
 
-function openlink(url) {
-	window.open(url.href, "_system");
+function openlink(element) {
+	window.open(element.href,"_system");
 	return false;
 }
