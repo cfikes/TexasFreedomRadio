@@ -30,7 +30,8 @@ function loadnews() {
         var ndesc = $(this).find("description").text();
         var nlink = $(this).find("link").text();
 	
-		$("#nlist").append('<li><a href="#" onClick="window.open("' + nlink + '","_system");><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
+		//$("#nlist").append('<li><a href="#" onClick="openDeviceBrowser("nlink")"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
+		$("#nlist").append('<li><a href="' + nlink + '" onClick="javascript:return openlink(this)"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
 		$('#nlist').listview('refresh'); 
 	    console.log("created news item.");
     });
