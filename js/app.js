@@ -75,8 +75,6 @@ function fpause() {
 }
 
 function openlink(element) {
-	var ref=window.open(element.href,"_system");
-	ref.show();
-	console.log(element.href);
+	window.open(element.href,"_system");
 	return false;
 }
