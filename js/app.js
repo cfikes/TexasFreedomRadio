@@ -75,10 +75,8 @@ function fpause() {
 }
 
 function openlink(element) {
-	window.open(element.href,"_system");
+	var ref=window.open(element.href,"_system");
+	ref.show();
 	console.log(element.href);
 	return false;
-}
-function openDeviceBrowser (externalLinkToOpen){
-	 window.open(externalLinkToOpen, '_system', 'location=no');
 }
