@@ -2,7 +2,7 @@
 $(document).ready(function(){
 	window.setInterval(function(){
 	showadv();
-	}, 20000);
+	}, 900000);
 
     var wheight = $(window).height();
     var wwidth = $(window).width();
@@ -58,21 +58,19 @@ function loadadv() {
 		    iwidth=wheight-140;
 			bheight=iheight*.95;	    
 	    }
-	    
 	    $("#adbutton").attr("height", iwidth*.9);
     
 		var atitle = $(this).find("title").text();
 		var aimg = $(this).find("link").text();
 		var awebsite = $(this).find("description").text();
-//		var atelephone = $(this).find('dc\\:creator').text();
-		console.log(atitle + " " + aimg + " " + awebsite);
+		//		var atelephone = $(this).find('dc\\:creator').text();
 		
 		$("#adspace").css({"height": iwidth,"width": iwidth,"background-size": iwidth});
 		aimg = "url(" + aimg + ")";
 		$("#adspace").css("background", aimg);
 		$("#adspace").css("background-size", "cover");
 
-//		$("#advertiser").html(atitle);
+		//		$("#advertiser").html(atitle);
 		$("#adlocation").attr("href",awebsite);
 		$("#adlocation").attr("onClick","javascript:return openlink(this)");
 				
