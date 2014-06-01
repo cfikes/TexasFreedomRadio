@@ -43,6 +43,26 @@ text-align: center;
     height: 100%;
     vertical-align: middle;
 }
+#advertisement {
+	text-align: center;
+}
+#adspace {
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#adspace img {
+	vertical-align: middle;
+}
+#advertiser {
+	margin: 5px;
+}
+
 </style>
 <!--<link rel="stylesheet" href="css/styles.css" />-->
 
@@ -69,10 +89,12 @@ text-align: center;
 	    	<li data-icon="info"><a href="#showinfopage" data-transition="slide">Show Information</a></li>
 
 			<li data-icon="user"><a href="#stationinfopage" data-transition="slide">Station Information</a></li>
+			
+			<li data-icon="user"><a href="#advertisement" data-transition="slide">Sponsored by</a></li>
 
 			<li data-icon="cloud"><a href="#appinfopage" data-transition="slide">App Information</a></li>
 	    </ul>
-	</div>	 		
+	</div>	 	
      			
 	<div data-role="header">
 		<h1>TX Freedom Radio</h1>
@@ -91,11 +113,10 @@ text-align: center;
 	 <div id="ubaplayer"></div>
         <span class="ubaplayer-controls" style="display:none;">
             <a class="ubaplayer-button" id="hiddenplayer" href="http://streams4.museter.com:8516/;stream.mp3">Play</a></span>
-
 		<!--<audio id="shoutcast">
 			<source src="http://streams4.museter.com:8516/;stream.mp3" type="audio/mp3">
-			<source src="http://streams4.museter.com:8516/;stream.mp3&13202692901" type="audio/mp3">-->
-		</audio>
+			<source src="http://streams4.museter.com:8516/;stream.mp3&13202692901" type="audio/mp3">
+		</audio>-->
 	</div><!-- /content -->
 
 	<div data-role="footer" data-position="fixed">
@@ -107,6 +128,29 @@ text-align: center;
 	    </div>
 	  </div><!-- /footer -->
 </div><!-- /page -->
+
+
+<!-- Advertisements -->
+<div data-role="page" id="advertisement" data-theme="a">
+     			
+	<div data-role="header">
+		<h1>Sponsored by</h1>
+		<a href="#player" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-delete ui-nodisc-icon ui-alt-icon ui-btn-right">Menu</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<div id="adcontainer">
+			<div id="adspace">
+			<span class="helper"></span>
+			<a id="adlocation"><img src="img/transparent.png" id="adbutton"></a>
+			</div>
+		<h3 id="advertiser"></h3>
+	</div>
+
+	</div><!-- /content -->
+</div><!-- /page -->
+
+
 
 
 <div data-role="page" id="showinfopage">
@@ -305,6 +349,7 @@ text-align: center;
 <script src="js/showdb.js"></script>
 <script src="js/news.js"></script>
 <script src="js/HTML5Audio.js"></script>
+<script src="js/advertisement.js"></script>
 
 </body>
 

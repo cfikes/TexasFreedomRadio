@@ -1,3 +1,5 @@
+var myMedia = new Media("http://streams4.museter.com:8516/;stream.mp3");
+
 $( document ).ready(function() {
     var wheight = $(window).height();
     var wwidth = $(window).width();
@@ -43,7 +45,7 @@ $(window).resize(function() {
 	    iheight=wwidth*.80;
 		bheight=wwidth*.40;   
     } else {
-	    iheight=wheight-180;
+	    iheight=wheight-140;
 		bheight=iheight*.40;	    
     }
     console.log(iheight);
@@ -61,7 +63,10 @@ function fplay() {
 	//var audioPlayer = document.getElementById("shoutcast");
     //audioPlayer.play();
 	//$("#hiddenplayer").click();
-	html5audio.play();
+
+// For Desktop and Web
+//	html5audio.play();
+	myMedia.play();
 }
 
 function fpause() {
@@ -71,7 +76,10 @@ function fpause() {
     //audioPlayer.pause();
     //audioPlayer.currentTime = 0;
 	//$("#hiddenplayer").click();
-	html5audio.pause();
+
+// For Desktop and Web
+//	html5audio.pause();
+	myMedia.stop();
 }
 
 function openlink(element) {

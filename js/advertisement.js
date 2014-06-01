@@ -1,39 +1,82 @@
-//Insert News Feed
+//Insert Advertisement into App
+$(document).ready(function(){
+	window.setInterval(function(){
+	showadv();
+	}, 20000);
 
-$("#newspage").on("pagecreate",function(event) {
-	console.log("loadnews() called on CREATE PAGE");
-	loadnews();
+    var wheight = $(window).height();
+    var wwidth = $(window).width();
+    var iheight;
+    var bheight;
+    console.log(wheight);
+    
+    if (wheight>=wwidth) {
+	    iheight=wwidth*.80;
+		bheight=wwidth*.40;   
+    } else {
+	    iheight=wheight-180;
+		bheight=iheight*.40;	    
+    }
+    
+	$("#advertisement").on("pagecreate",function(event) {
+		loadadv();
+	});
+
 });
 
-function loadnews() {
+
+function showadv(){
+	$.mobile.pageContainer.pagecontainer("change", "#advertisement")
+	loadadv();
+}
+
+function loadadv() {
     var xml;
-    $("#newsrefreshbutton").hide();
-    $("#nlist").html('<li id="nlistloading">Loading News Feed...</li>');
-	
     $.ajax({
         type: "GET",
-        url: "http://www.fikesmedia.com/_freedom1300/articles.xml",
+        url: "http://www.fikesmedia.com/_freedom1300/mobileadvertisers.xml",
         dataType: "xml",
         success: xmlParser
     });
 	
     function xmlParser(data) {
+    
     console.log("xmlParser loaded.");
     xml = data;
-    $("#nlistloading").hide();
+    console.log("Pulled XML for AD");
 
     $(xml).find("item").each(function () {
+		var wheight = $(window).height();
+	    var wwidth = $(window).width();
+	    var iheight;
+	    var bheight;
+	    
+	    if (wheight>=wwidth) {
+		    iwidth=wwidth*.80;
+			bheight=wwidth*.95;   
+	    } else {
+		    iwidth=wheight-140;
+			bheight=iheight*.95;	    
+	    }
+	    
+	    $("#adbutton").attr("height", iwidth*.9);
+    
+		var atitle = $(this).find("title").text();
+		var aimg = $(this).find("link").text();
+		var awebsite = $(this).find("description").text();
+//		var atelephone = $(this).find('dc\\:creator').text();
+		console.log(atitle + " " + aimg + " " + awebsite);
+		
+		$("#adspace").css({"height": iwidth,"width": iwidth,"background-size": iwidth});
+		aimg = "url(" + aimg + ")";
+		$("#adspace").css("background", aimg);
+		$("#adspace").css("background-size", "cover");
 
-        var ntitle = $(this).find("title").text();
-        var ndate = $(this).find("pubDate").text();
-        ndate = ndate.substring(0, ndate.length - 15);
-        var ndesc = $(this).find("description").text();
-        var nlink = $(this).find("link").text();
-	
-		$("#nlist").append('<li><a href="' + nlink + '" onClick="javascript:return openlink(this)"><h2>' + ntitle + '</h2><p><strong>' + ndate +'</strong></p></a>');
-		$('#nlist').listview('refresh'); 
-	    console.log("created news item.");
+//		$("#advertiser").html(atitle);
+		$("#adlocation").attr("href",awebsite);
+		$("#adlocation").attr("onClick","javascript:return openlink(this)");
+				
     });
-	$("#newsrefreshbutton").show();
 	}
+	
 }

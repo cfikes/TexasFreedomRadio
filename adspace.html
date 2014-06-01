@@ -1,0 +1,61 @@
+
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Sponsored by</title> 
+	<link rel="stylesheet" href="themes/txfreedom.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+</head> 
+<body> 
+
+<div data-role="page">
+	
+		<div data-role="header" data-theme="d">
+			<h1>Sponsored by</h1>
+
+		</div>
+
+		<div data-role="content" data-theme="c">
+			<h1>Delete page?</h1>
+			<p>This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <code>data-rel="dialog"</code> attribute.</p>
+			<a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Sounds good</a>       
+			<a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="c">Cancel</a>    
+		</div>
+	</div>
+
+<script type="text/javascript">
+loadadv();
+function loadadv() {
+    var xml;
+    
+    $.ajax({
+        type: "GET",
+        url: "http://www.fikesmedia.com/_freedom1300/mobileadvertisers.xml",
+        dataType: "xml",
+        success: xmlParser
+    });
+	
+    function xmlParser(data) {
+    console.log("xmlParser loaded.");
+    xml = data;
+
+    $(xml).find("item").each(function () {
+		var atitle = $(this).find("title").text();
+		var aimg = $(this).find("link").text();
+		var awebsite = $(this).find("description").text();
+		var atelephone = $(this).find("dc:creator").text();
+		
+		//$("#adspace").html('<div datarole=\"<h1>Sponsored by</h1><div role="main" class="ui-content"><p><img src="' + aimg + '"></p><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Close</a><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Close</a></div>');
+		
+		
+		
+    });
+	}
+	
+}
+</script>
+</body>
+</html>
