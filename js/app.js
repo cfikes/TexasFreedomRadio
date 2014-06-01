@@ -1,5 +1,4 @@
-var myMedia = new Media("http://streams4.museter.com:8516/;stream.mp3");
-
+var myMedia = null;
 $( document ).ready(function() {
     var wheight = $(window).height();
     var wwidth = $(window).width();
@@ -66,6 +65,7 @@ function fplay() {
 
 // For Desktop and Web
 //	html5audio.play();
+	myMedia = new Media("http://streams4.museter.com:8516/;stream.mp3");
 	myMedia.play();
 }
 
