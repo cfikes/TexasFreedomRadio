@@ -43,7 +43,7 @@ var html5audio = {
 			 var m = parseInt((myaudio.currentTime / 60) % 60);
 			 var h = parseInt(((myaudio.currentTime / 60) / 60) % 60);
 			 if (isPlaying && myaudio.currentTime > 0) {
-				 textPosition.innerHTML = pad2(h) + ':' + pad2(m) + ':' + pad2(s);
+				 //textPosition.innerHTML = pad2(h) + ':' + pad2(m) + ':' + pad2(s);
 			 }
 		}, false);
 		myaudio.addEventListener("error", function() {
