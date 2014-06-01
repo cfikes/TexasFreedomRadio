@@ -65,7 +65,7 @@ function fplay() {
 
 // For Desktop and Web
 //	html5audio.play();
-//	myMedia = new Media("http://streams4.museter.com:8516/;stream.mp3");
+	myMedia = new Media("http://streams4.museter.com:8516/;stream.mp3");
 	myMedia.play();
 }
 
