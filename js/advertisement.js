@@ -1,8 +1,9 @@
 //Insert Advertisement into App
 $(document).ready(function(){
+	loadadv(0);
 	window.setInterval(function(){
-	showadv();
-	}, 900000);
+	loadadv(1);
+	}, 360000);
 
     var wheight = $(window).height();
     var wwidth = $(window).width();
@@ -14,23 +15,23 @@ $(document).ready(function(){
 	    iheight=wwidth*.80;
 		bheight=wwidth*.40;   
     } else {
-	    iheight=wheight-180;
+	    iheight=wheight-140;
 		bheight=iheight*.40;	    
     }
     
-	$("#advertisement").on("pagecreate",function(event) {
-		loadadv();
-	});
+	//$("#advertisement").on("pagecreate",function(event) {
+	//	loadadv();
+	//console.log("Add Impression");
+	//});
 
 });
 
 
 function showadv(){
 	$.mobile.pageContainer.pagecontainer("change", "#advertisement")
-	loadadv();
 }
 
-function loadadv() {
+function loadadv(sbit) {
     var xml;
     $.ajax({
         type: "GET",
@@ -76,5 +77,8 @@ function loadadv() {
 				
     });
 	}
-	
+	if ($.mobile.activePage.attr("id")!= "advertisement" && sbit==1) {
+	sbit=0;
+	$.mobile.pageContainer.pagecontainer("change", "#advertisement");
+	}
 }
