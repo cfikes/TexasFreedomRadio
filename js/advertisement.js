@@ -64,7 +64,8 @@ function loadadv(sbit) {
 		var atitle = $(this).find("title").text();
 		var aimg = $(this).find("link").text();
 		var awebsite = $(this).find("description").text();
-		//		var atelephone = $(this).find('dc\\:creator').text();
+		var atelephone = $(this).find("pubDate").text();
+		atelephone = "tel\:" + atelephone;
 		
 		$("#adspace").css({"height": iwidth,"width": iwidth,"background-size": iwidth});
 		aimg = "url(" + aimg + ")";
@@ -72,6 +73,7 @@ function loadadv(sbit) {
 		$("#adspace").css("background-size", "cover");
 
 		//		$("#advertiser").html(atitle);
+		$("#callsponsor").attr("href",atelephone);
 		$("#adlocation").attr("href",awebsite);
 		$("#adlocation").attr("onClick","javascript:return openlink(this)");
 				
