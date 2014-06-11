@@ -74,6 +74,7 @@ function loadadv(sbit) {
 
 		//		$("#advertiser").html(atitle);
 		$("#callsponsor").attr("href",atelephone);
+		$("#visitsponsor").attr("href",awebsite);
 		$("#adlocation").attr("href",awebsite);
 		$("#adlocation").attr("onClick","javascript:return openlink(this)");
 				
