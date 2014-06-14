@@ -12,7 +12,7 @@ function loadnews() {
 	
     $.ajax({
         type: "GET",
-        url: "http://www.fikesmedia.com/_freedom1300/articles.xml",
+        url: "http://www.texasfreedomradio.com/articles.xml",
         dataType: "xml",
         success: xmlParser
     });

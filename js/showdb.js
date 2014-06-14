@@ -1,7 +1,7 @@
 function updateShow(iheight){
   $.ajax({
     type: "GET",
-    url: "http://www.fikesmedia.com/_freedom1300/nowplaying.php",
+    url: "http://www.texasfreedomradio.com/nowplaying.php",
     dataType: "xml",
     success: function(xml){
 
@@ -12,7 +12,7 @@ function updateShow(iheight){
 	  var sArt = $(this).find('artwork').text();
       var sPhone = $(this).find('phone').text();
       var sPhone = "tel:" + sPhone;
-	sArt = "url(http://www.fikesmedia.com/_freedom1300/_mobile/img/" + sArt + ")";
+	sArt = "url(http://www.texasfreedomradio.com/_mobile/img/" + sArt + ")";
 	$("#showinfo").css("background", sArt);
 	$("#showinfo").css("background-size", "cover");
 	$("#showtitle").html(sTitle);

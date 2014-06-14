@@ -35,7 +35,7 @@ function loadadv(sbit) {
     var xml;
     $.ajax({
         type: "GET",
-        url: "http://www.fikesmedia.com/_freedom1300/mobileadvertisers.xml",
+        url: "http://www.texasfreedomradio.com/mobileadvertisers.xml",
         dataType: "xml",
         success: xmlParser
     });
