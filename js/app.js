@@ -17,7 +17,13 @@ $( document ).ready(function() {
     }
     console.log(iheight);
     updateShow(iheight);
-    window.setInterval(function(){ updateShow(iheight); }, 60000);
+	
+    window.setInterval(function(){ 
+		updateShow(iheight);
+		console.log("Waiting for Ad 40 Seconds");
+		setTimeout(function(){
+			loadplayingad();},40000)
+		}, 60000);
 
     $("#sbutton").hide();
 	$("#showinfo").css({"height": iwidth,"width": iwidth,"background": "url(\"img/generic.jpg\")","background-size": iwidth});
