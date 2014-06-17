@@ -1,0 +1,29 @@
+<podcasts>
+	<show>
+		<title>Freedom Wake Up Call</title>
+		<image>http://www.texasfreedomradio.com/_mobile/wuc.jpg</image>
+		<desc>Welcome to the Family</desc>
+		<rss>http://www.texasfreedomradio.com/freedomwakeupcall.xml</rss>
+	</show>
+	
+	<show>
+		<title>The Final Chapter</title>
+		<image>http://www.texasfreedomradio.com/_mobile/tfc.jpg</image>
+		<desc>Truth vs Tradition</desc>
+		<rss>http://www.texasfreedomradio.com/thefinalchapter.xml</rss>
+	</show>
+	
+	<show>
+		<title>Final F'n Friday</title>
+		<image>http://www.texasfreedomradio.com/_mobile/fff.jpg</image>
+		<desc>Finally Friday</desc>
+		<rss>http://www.texasfreedomradio.com/finalfnfriday.xml</rss>
+	</show>
+	
+	<show>
+		<title>Family Law Matters</title>
+		<image>http://www.texasfreedomradio.com/_mobile/flm.jpg</image>
+		<desc>Answers about family law</desc>
+		<rss>http://www.texasfreedomradio.com/familylawmatters.xml</rss>
+	</show>
+</podcasts>
